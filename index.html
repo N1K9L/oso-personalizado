@@ -7,9 +7,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet" />
-
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -28,15 +26,17 @@
     <div class="header-actions">
       <form id="search-form">
         <input type="search" placeholder="Busca tu osito ideal…" />
-        <button type="button" class="btn btn-primary">
+        <button type="submit" class="btn btn-primary">
           <i class="fa-solid fa-magnifying-glass"></i> Buscar
         </button>
       </form>
+      <button type="button" class="btn" id="open-cart" style="background-color: #f8c146; color: black; margin-left: 15px;">
+        <i class="fa-solid fa-cart-shopping"></i> <span id="cart-count">0</span>
+      </button>
     </div>
   </header>
 
   <main class="site-main">
-
     <div id="aviso-pago" class="alert-box">
       <i class="fa-solid fa-triangle-exclamation alert-icon"></i>
       <div>
@@ -46,7 +46,6 @@
 
     <section id="catalogo" class="section-catalogo">
       <h2 class="section-title">Elige tu Osito Base</h2>
-
       <div class="cards-grid">
         <article class="product-card">
           <div class="card-img">🧸</div>
@@ -55,13 +54,10 @@
             <p class="card-desc">Nuestro oso clásico, suave y perfecto para abrazar.</p>
             <div class="card-footer">
               <span class="card-price">$28.00</span>
-              <button class="btn btn-primary">
-                <i class="fa-solid fa-cart-plus"></i> Personalizar
-              </button>
+              <button class="btn btn-primary btn-add"><i class="fa-solid fa-cart-plus"></i> Personalizar</button>
             </div>
           </div>
         </article>
-
         <article class="product-card">
           <div class="card-img">🐼</div>
           <div class="card-body">
@@ -69,13 +65,10 @@
             <p class="card-desc">Diseño bicolor icónico con relleno hipoalergénico.</p>
             <div class="card-footer">
               <span class="card-price">$32.00</span>
-              <button class="btn btn-primary">
-                <i class="fa-solid fa-cart-plus"></i> Personalizar
-              </button>
+              <button class="btn btn-primary btn-add"><i class="fa-solid fa-cart-plus"></i> Personalizar</button>
             </div>
           </div>
         </article>
-
         <article class="product-card">
           <div class="card-img">🐻‍❄️</div>
           <div class="card-body">
@@ -83,9 +76,7 @@
             <p class="card-desc">Edición especial, ultra esponjoso y de color nieve.</p>
             <div class="card-footer">
               <span class="card-price">$35.00</span>
-              <button class="btn btn-primary">
-                <i class="fa-solid fa-cart-plus"></i> Personalizar
-              </button>
+              <button class="btn btn-primary btn-add"><i class="fa-solid fa-cart-plus"></i> Personalizar</button>
             </div>
           </div>
         </article>
@@ -96,22 +87,14 @@
       <div class="personaliza-visual">
         <div class="card-img large-img">🧸</div>
       </div>
-      <div class="personaliza-opciones">
+      <div class="personaliza-text">
         <h2>Configuración del Oso</h2>
         <p>Agrega las características, sonidos o ropa a tu muñeco.</p>
-        
-        <div class="opciones-lista">
-          <label><input type="checkbox" checked> Relleno extra suave</label><br>
-          <label><input type="checkbox"> Sonido grabado</label><br>
-          <label><input type="checkbox"> Camiseta personalizada</label>
-        </div>
-
         <button class="btn btn-primary btn-confirm">
           <i class="fa-solid fa-check"></i> Confirmar Orden
         </button>
       </div>
     </section>
-
   </main>
 
   <footer class="site-footer">
@@ -130,5 +113,21 @@
     </div>
   </footer>
 
+  <div class="cart-overlay" id="cart-overlay"></div>
+  <aside class="cart-sidebar" id="cart-sidebar">
+    <div class="cart-header">
+      <h3>Tu Carrito 🛒</h3>
+      <button id="close-cart" class="btn-close"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <div class="cart-items" id="cart-items">
+      <p class="cart-empty">Tu carrito está vacío.</p>
+    </div>
+    <div class="cart-footer">
+      <p>Total: <strong id="cart-total-price">$0.00</strong></p>
+      <button id="checkout-btn" class="btn btn-primary" style="width: 100%; justify-content: center;">Proceder al pago</button>
+    </div>
+  </aside>
+  
+  <script src="script.js"></script>
 </body>
 </html>
