@@ -1,4 +1,4 @@
-/* 1. SELECTOR DE ETIQUETA: Tipografía y fondo claro */
+/* 1. SELECTOR DE ETIQUETA: Tipografía y fondo */
 body {
   font-family: 'Nunito', sans-serif;
   background-color: #f4f7f6;
@@ -7,44 +7,22 @@ body {
   padding: 0;
 }
 
-/* 2. SELECTOR DE CLASE Y FLEXBOX: Header destacado en azul */
+/* 2. HEADER Y NAVEGACIÓN */
 .site-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: #0056b3;
   color: white;
-  padding: 1.5em 5%; /* Unidades 'em' y '%' */
+  padding: 1.5em 5%;
 }
+.header-logo { font-size: 24px; font-weight: bold; }
+.header-nav { display: flex; gap: 20px; }
+.header-nav a { color: white; text-decoration: none; font-weight: 600; }
+#search-form { display: flex; gap: 10px; }
+#search-form input { padding: 8px; border-radius: 4px; border: none; }
 
-.header-logo {
-  font-size: 24px;
-  font-weight: bold;
-}
-
-.header-nav {
-  display: flex;
-  gap: 20px;
-}
-
-.header-nav a {
-  color: white;
-  text-decoration: none;
-  font-weight: 600;
-}
-
-#search-form {
-  display: flex;
-  gap: 10px;
-}
-
-#search-form input {
-  padding: 8px;
-  border-radius: 4px;
-  border: none;
-}
-
-/* 3. SELECTOR DE ID: Caja de Advertencia Amarilla */
+/* 3. CAJA DE ADVERTENCIA */
 #aviso-pago {
   background-color: #ffc107;
   color: #000;
@@ -53,16 +31,13 @@ body {
   align-items: center;
   gap: 15px;
   width: 80%;
-  margin: 30px auto; /* Unidad 'px' y alineación central */
+  margin: 30px auto;
   padding: 1.2em;
   border-radius: 8px;
 }
+.alert-icon { font-size: 2em; }
 
-.alert-icon {
-  font-size: 2em;
-}
-
-/* 4. SELECTOR DE PSEUDO-CLASE: Botones interactivos */
+/* 4. BOTONES */
 .btn {
   padding: 10px 15px;
   border: none;
@@ -72,130 +47,122 @@ body {
   font-weight: bold;
   transition: all 0.3s ease;
 }
+.btn-primary { background-color: #007bff; color: white; }
+.btn-primary:hover { background-color: #003d82; }
+.btn-primary:active { transform: scale(0.95); }
 
-.btn-primary {
-  background-color: #007bff;
-  color: white;
-}
-
-/* Efecto Hover */
-.btn-primary:hover {
-  background-color: #003d82;
-}
-
-/* Efecto Active */
-.btn-primary:active {
-  transform: scale(0.95);
-}
-
-/* 5. DISEÑO DE TARJETAS (FLEXBOX) */
-.section-catalogo {
-  text-align: center;
-  padding: 2em 5%;
-}
-
-.cards-grid {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  margin-top: 20px;
-}
-
+/* 5. TARJETAS */
+.section-catalogo { text-align: center; padding: 2em 5%; }
+.cards-grid { display: flex; justify-content: center; gap: 30px; margin-top: 20px; }
 .product-card {
-  background: white;
-  border-radius: 10px;
-  padding: 20px;
-  width: 280px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  display: flex;
-  flex-direction: column;
+  background: white; border-radius: 10px; padding: 20px;
+  width: 280px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  display: flex; flex-direction: column;
 }
+.card-img { font-size: 6em; background-color: #e9ecef; border-radius: 8px; padding: 20px 0; margin-bottom: 15px; }
+.card-price { font-weight: 900; font-size: 1.2em; color: #0056b3; }
+.card-footer { display: flex; justify-content: space-between; align-items: center; margin-top: 15px; }
 
-.card-img {
-  font-size: 6em;
-  background-color: #e9ecef;
-  border-radius: 8px;
-  padding: 20px 0;
-  margin-bottom: 15px;
-}
-
-.card-price {
-  font-weight: 900;
-  font-size: 1.2em;
-  color: #0056b3;
-}
-
-.card-footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 15px;
-}
-
-/* 6. SECCIÓN DE CREACIÓN PERSONALIZADA */
+/* 6. PERSONALIZACIÓN */
 .section-personaliza {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 50px;
-  padding: 4em 5%;
-  background-color: white;
-  margin: 40px 0;
+  display: flex; justify-content: center; align-items: center; gap: 50px;
+  padding: 4em 5%; background-color: white; margin: 40px 0;
 }
-
-.large-img {
-  font-size: 10em;
-  padding: 40px;
-}
-
-.opciones-lista {
-  margin: 20px 0;
-  line-height: 2;
-}
-
-.btn-confirm {
-  font-size: 1.1em;
-  padding: 15px 30px;
-}
+.large-img { font-size: 10em; padding: 40px; }
+.btn-confirm { font-size: 1.1em; padding: 15px 30px; }
 
 /* 7. FOOTER */
-.site-footer {
-  background-color: #222;
-  color: #ccc;
-  padding: 2em 5%;
-  text-align: center;
-}
+.site-footer { background-color: #222; color: #ccc; padding: 2em 5%; text-align: center; }
+.footer-grid { display: flex; justify-content: space-around; margin-bottom: 20px; }
 
-.footer-grid {
-  display: flex;
-  justify-content: space-around;
-  margin-bottom: 20px;
-}
-
-/* 8. DISEÑO RESPONSIVO (MEDIA QUERIES) */
+/* 8. MEDIA QUERIES (Móviles) */
 @media (max-width: 768px) {
-  .site-header {
-    flex-direction: column;
-    text-align: center;
-    gap: 15px;
-  }
-  
-  .cards-grid {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .section-personaliza {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  #search-form {
-    flex-direction: column;
-  }
-
-  #aviso-pago {
-    flex-direction: column;
-    text-align: center;
-  }
+  .site-header { flex-direction: column; text-align: center; gap: 15px; }
+  .cards-grid { flex-direction: column; align-items: center; }
+  .section-personaliza { flex-direction: column; text-align: center; }
+  #search-form { flex-direction: column; }
+  #aviso-pago { flex-direction: column; text-align: center; }
 }
+
+/* =====================================================
+   ESTILOS DE LA CALCULADORA INTERACTIVA (JS)
+====================================================== */
+.calculadora-wrapper {
+  background: #ffffff; border: 2px solid #bfdbfe; border-radius: 16px;
+  padding: 1.4em 1.6em; margin-bottom: 1.5em; box-shadow: 0 4px 20px rgba(37, 99, 235, 0.1);
+}
+.calc-titulo { font-size: 1.05rem; font-weight: 800; color: #1e1b18; margin-bottom: 0.3em; }
+.calc-desc { font-size: 0.88rem; color: #6b6560; margin-bottom: 1em; }
+.calc-opciones { list-style: none; margin-bottom: 1.2em; padding: 0; }
+.calc-item { margin-bottom: 0.5em; }
+.calc-label {
+  display: flex; align-items: center; gap: 10px; cursor: pointer;
+  padding: 8px 12px; border-radius: 10px; border: 1.5px solid #e2e8f0;
+  background: #f8fafc; transition: background 0.2s, border-color 0.2s;
+  font-size: 0.92rem; font-weight: 600; color: #1e1b18;
+}
+.calc-label:hover { background: #eff6ff; border-color: #93c5fd; }
+.calc-checkbox { display: none; }
+.calc-check-icon {
+  width: 20px; height: 20px; border-radius: 6px; border: 2px solid #94a3b8;
+  flex-shrink: 0; transition: background 0.2s, border-color 0.2s;
+  display: flex; align-items: center; justify-content: center;
+}
+.calc-checkbox:checked + .calc-check-icon { background: #2563eb; border-color: #2563eb; }
+.calc-checkbox:checked + .calc-check-icon::after { content: "✓"; color: white; font-size: 0.75rem; font-weight: 800; }
+.calc-precio-extra { margin-left: auto; color: #2563eb; font-weight: 700; font-size: 0.85rem; }
+.calc-resultado {
+  background: #1e1b18; color: #f5f0eb; padding: 0.8em 1.2em;
+  border-radius: 12px; font-size: 1rem; font-weight: 700;
+  display: flex; align-items: center; justify-content: space-between;
+}
+#calc-total { font-size: 1.3rem; color: #fbbf24; transition: transform 0.3s, color 0.3s; display: inline-block; }
+
+/* =====================================================
+   ESTILOS DEL CARRITO (VENTANITA FLOTANTE)
+====================================================== */
+.cart-overlay {
+  position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+  background: transparent; display: none; z-index: 999;
+}
+.cart-overlay.active { display: block; }
+
+.cart-sidebar {
+  position: fixed;
+  top: 80px; /* Debajo del encabezado */
+  right: 5%; /* Flotando a la derecha */
+  width: 320px;
+  max-height: 70vh;
+  background: white;
+  border-radius: 12px; /* Esquinas redondas de ventanita */
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  
+  /* Animación de entrada */
+  opacity: 0; visibility: hidden;
+  transform: translateY(-20px);
+  transition: all 0.3s ease;
+}
+.cart-sidebar.active {
+  opacity: 1; visibility: visible; transform: translateY(0);
+}
+
+.cart-header {
+  padding: 15px 20px; background: #0056b3; color: white;
+  display: flex; justify-content: space-between; align-items: center;
+  border-radius: 12px 12px 0 0;
+}
+.cart-header h3 { margin: 0; font-size: 1.1rem; }
+.btn-close { background: none; border: none; color: white; font-size: 1.2rem; cursor: pointer; }
+
+.cart-items { padding: 20px; flex-grow: 1; overflow-y: auto; }
+.cart-empty { text-align: center; color: #666; margin-top: 20px; }
+.cart-item { display: flex; justify-content: space-between; border-bottom: 1px solid #eee; padding: 15px 0; font-weight: 600; }
+
+.cart-footer {
+  padding: 15px 20px; border-top: 1px solid #ddd; background: #f8f9fa;
+  border-radius: 0 0 12px 12px;
+}
+.cart-footer p { margin: 0 0 15px 0; }
