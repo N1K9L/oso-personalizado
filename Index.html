@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ositos & Co. — Peluches Personalizados</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="header-logo">
+      <i class="fa-solid fa-paw"></i>
+      <span class="logo-brand">Ositos & Co.</span>
+    </div>
+
+    <nav class="header-nav">
+      <a href="#catalogo">Catálogo</a>
+      <a href="#personaliza">Personaliza</a>
+    </nav>
+
+    <div class="header-actions">
+      <form id="search-form">
+        <input type="search" placeholder="Busca tu osito ideal…" />
+        <button type="button" class="btn btn-primary">
+          <i class="fa-solid fa-magnifying-glass"></i> Buscar
+        </button>
+      </form>
+    </div>
+  </header>
+
+  <main class="site-main">
+
+    <div id="aviso-pago" class="alert-box">
+      <i class="fa-solid fa-triangle-exclamation alert-icon"></i>
+      <div>
+        <strong>¡Información Importante!</strong> Todos nuestros osos son personalizables. Asegúrate de confirmar las características de tu personaje antes de finalizar el pedido.
+      </div>
+    </div>
+
+    <section id="catalogo" class="section-catalogo">
+      <h2 class="section-title">Elige tu Osito Base</h2>
+
+      <div class="cards-grid">
+        <article class="product-card">
+          <div class="card-img">🧸</div>
+          <div class="card-body">
+            <h3 class="card-title">Happy Hugs Teddy</h3>
+            <p class="card-desc">Nuestro oso clásico, suave y perfecto para abrazar.</p>
+            <div class="card-footer">
+              <span class="card-price">$28.00</span>
+              <button class="btn btn-primary">
+                <i class="fa-solid fa-cart-plus"></i> Personalizar
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="card-img">🐼</div>
+          <div class="card-body">
+            <h3 class="card-title">Panda Cariñoso</h3>
+            <p class="card-desc">Diseño bicolor icónico con relleno hipoalergénico.</p>
+            <div class="card-footer">
+              <span class="card-price">$32.00</span>
+              <button class="btn btn-primary">
+                <i class="fa-solid fa-cart-plus"></i> Personalizar
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="card-img">🐻‍❄️</div>
+          <div class="card-body">
+            <h3 class="card-title">Osito Polar</h3>
+            <p class="card-desc">Edición especial, ultra esponjoso y de color nieve.</p>
+            <div class="card-footer">
+              <span class="card-price">$35.00</span>
+              <button class="btn btn-primary">
+                <i class="fa-solid fa-cart-plus"></i> Personalizar
+              </button>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="personaliza" class="section-personaliza">
+      <div class="personaliza-visual">
+        <div class="card-img large-img">🧸</div>
+      </div>
+      <div class="personaliza-opciones">
+        <h2>Configuración del Oso</h2>
+        <p>Agrega las características, sonidos o ropa a tu muñeco.</p>
+        
+        <div class="opciones-lista">
+          <label><input type="checkbox" checked> Relleno extra suave</label><br>
+          <label><input type="checkbox"> Sonido grabado</label><br>
+          <label><input type="checkbox"> Camiseta personalizada</label>
+        </div>
+
+        <button class="btn btn-primary btn-confirm">
+          <i class="fa-solid fa-check"></i> Confirmar Orden
+        </button>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h4>Ositos & Co.</h4>
+        <p>Haciendo peluches con amor.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Contacto</h4>
+        <p><i class="fa-solid fa-envelope"></i> hola@ositosco.com</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Ositos & Co. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

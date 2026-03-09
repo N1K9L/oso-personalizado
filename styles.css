@@ -1,0 +1,201 @@
+/* 1. SELECTOR DE ETIQUETA: Tipografía y fondo claro */
+body {
+  font-family: 'Nunito', sans-serif;
+  background-color: #f4f7f6;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+/* 2. SELECTOR DE CLASE Y FLEXBOX: Header destacado en azul */
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #0056b3;
+  color: white;
+  padding: 1.5em 5%; /* Unidades 'em' y '%' */
+}
+
+.header-logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.header-nav {
+  display: flex;
+  gap: 20px;
+}
+
+.header-nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+#search-form {
+  display: flex;
+  gap: 10px;
+}
+
+#search-form input {
+  padding: 8px;
+  border-radius: 4px;
+  border: none;
+}
+
+/* 3. SELECTOR DE ID: Caja de Advertencia Amarilla */
+#aviso-pago {
+  background-color: #ffc107;
+  color: #000;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  width: 80%;
+  margin: 30px auto; /* Unidad 'px' y alineación central */
+  padding: 1.2em;
+  border-radius: 8px;
+}
+
+.alert-icon {
+  font-size: 2em;
+}
+
+/* 4. SELECTOR DE PSEUDO-CLASE: Botones interactivos */
+.btn {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: inherit;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  color: white;
+}
+
+/* Efecto Hover */
+.btn-primary:hover {
+  background-color: #003d82;
+}
+
+/* Efecto Active */
+.btn-primary:active {
+  transform: scale(0.95);
+}
+
+/* 5. DISEÑO DE TARJETAS (FLEXBOX) */
+.section-catalogo {
+  text-align: center;
+  padding: 2em 5%;
+}
+
+.cards-grid {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.product-card {
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  width: 280px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+.card-img {
+  font-size: 6em;
+  background-color: #e9ecef;
+  border-radius: 8px;
+  padding: 20px 0;
+  margin-bottom: 15px;
+}
+
+.card-price {
+  font-weight: 900;
+  font-size: 1.2em;
+  color: #0056b3;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
+}
+
+/* 6. SECCIÓN DE CREACIÓN PERSONALIZADA */
+.section-personaliza {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  padding: 4em 5%;
+  background-color: white;
+  margin: 40px 0;
+}
+
+.large-img {
+  font-size: 10em;
+  padding: 40px;
+}
+
+.opciones-lista {
+  margin: 20px 0;
+  line-height: 2;
+}
+
+.btn-confirm {
+  font-size: 1.1em;
+  padding: 15px 30px;
+}
+
+/* 7. FOOTER */
+.site-footer {
+  background-color: #222;
+  color: #ccc;
+  padding: 2em 5%;
+  text-align: center;
+}
+
+.footer-grid {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+/* 8. DISEÑO RESPONSIVO (MEDIA QUERIES) */
+@media (max-width: 768px) {
+  .site-header {
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+  }
+  
+  .cards-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .section-personaliza {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  #search-form {
+    flex-direction: column;
+  }
+
+  #aviso-pago {
+    flex-direction: column;
+    text-align: center;
+  }
+}
